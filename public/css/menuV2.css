@@ -12,6 +12,17 @@
 body{
     background-color: black;
 }
+a{
+    text-decoration: none;
+}
+.admini{
+    color: white;
+    text-align: center;
+    font-size: 120%; 
+    font-family:'digory_doodlesregular';
+   height: 50px;
+
+}
 
 li {
     list-style: none;
@@ -53,7 +64,7 @@ li {
 .avatarPs{
     width: 75px;
     height: 75px;
-    border-radius: 50%;
+    border-radius: 50%;   
 }
 .ingredients{
     background-color:grey;  
@@ -129,6 +140,9 @@ footer{
    width: 600px;
     margin-top: 5%;
 }
+.photoRecette{
+    padding-left: 30px;
+}
 #connex{
     color:white;
     font-weight: bold;
@@ -158,19 +172,26 @@ footer{
 }
 #inscription{
     border-radius:1.3em;
-    border:solid white 2px;
-    width: 450px;
+    border:solid white 2px;  
    
     
-} 
+}  
 #connexion{
     border-radius:1.3em;
     border:solid white 2px;
      position: absolute;    
     top:30%; 
-    width: 450px;
+    
    
 
+}
+#averti
+{
+   position: absolute;
+   top:70%;
+   left:40%;
+   font-weight: bold;
+   font-size: 120%;
 }
    
   
@@ -220,13 +241,63 @@ footer{
     .photoBack{
         width: 25%;
     }
-    table,
-    tbody,
-    tr,
-    td {
-      display: block;
-      width: auto!important;
-      /* parceque tu as mis des style inline grrr */
+    
+    .ajout{
+        color: white;
+        text-align: center;
+        font-size: 120%; 
+        font-family:'digory_doodlesregular';
+       
     }
+    .point{
+       color:red;
+       font-weight: bold;
+
+
+    }
+    .ajout a{
+        color:white;
+        text-decoration: none;
+    }
+    h1{
+        font-family:'digory_doodlesregular';        
+        padding-top: 5%;
+        font-size: 222%;       
+        /* height: 102px; */
+    }
+    #red{
+        color:white;
+    }
+    #blue{
+        color:blue;
+    }
+    @media all and (max-device-width:800px){
+        h1{
+            line-height: 2;
+        }
+        p.ajout{
+            line-height: 2;
+
+        }
+        table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: auto;
+
+    }
+    .btn1{
+        width: 25%;
+        margin: 0 auto;
+    }
+    .btn2{
+        width: 25%;
+        margin: 0 auto;
+    }
+    
+}
+
+    
     
    

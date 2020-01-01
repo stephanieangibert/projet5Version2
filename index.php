@@ -46,7 +46,7 @@ try {
     }
     else if($_GET['action']=='love') {
         if (isset($_GET['id']) && $_GET['id'] > 0){
-            heart($_GET['id'],$_SESSION['id']);
+            heart($_GET['id'],$_SESSION['id']); 
             
            
         }

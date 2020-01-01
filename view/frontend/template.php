@@ -74,7 +74,7 @@
   
   <?php endif ?>
 
-<h1 class="text-white text-center m-4">Le blog de Joce</h1>
+<h1 class="text-white text-center m-5">Le blog de Joce</h1>
 <?= $content?>
   <footer>
   <div class="meteo">

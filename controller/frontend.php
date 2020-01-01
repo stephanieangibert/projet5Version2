@@ -37,6 +37,7 @@ function listPosts()
             $content=htmlspecialchars($_POST['content']);
             $id_user=$_SESSION['id'];            
             $statut=0;
+            $love=0;
             if($_FILES['photo']['size'] <= $tailleMax){
                $extensionUpload = strtolower(substr(strrchr($_FILES['photo']['name'], '.'), 1));
                if(in_array($extensionUpload, $extensionsValides)){
@@ -46,7 +47,7 @@ function listPosts()
                         $photo=0;
                        $photo=$_POST['title'].".".$extensionUpload;
                        $Post=new PostManager();
-                       $addReci=$Post->add($title,$ingredients,$content,$id_user,$photo,$statut);
+                       $addReci=$Post->add($title,$ingredients,$content,$id_user,$photo,$statut,$love);
                        $erreur="Votre recette est enregistrée !";
                       }
                       else{
@@ -65,9 +66,10 @@ function listPosts()
            $content=htmlspecialchars($_POST['content']); 
            $id_user=$_SESSION['id'];           
            $photo="";
-           $statut=0;      
+           $statut=0; 
+           $love=0;     
            $Post=new PostManager();
-           $addReci=$Post->add($title,$ingredients,$content,$id_user,$photo,$statut);
+           $addReci=$Post->add($title,$ingredients,$content,$id_user,$photo,$statut,$love);
            $erreur="Votre recette est enregistrée !";
          }           
 
@@ -276,17 +278,31 @@ function addComment($comment,$id_pseudo,$id_recipe){
 
 function heart($id,$id_user){ 
    $point=new PostManager();
-   $pointH=$point->point($id,$id_user); 
-   // die(var_dump($pointH)); 
+   $pointH=$point->point($id,$id_user);
+   $love="";
+   
    if($pointH==0){   
       $postAlo=new PostManager();
       $addLo=$postAlo->addLove($id,$id_user);
+      $pl=$point->plusLove($id);
+      $love="red";
+      
    } 
    else{
       $postAlo=new PostManager();
       $delLove=$postAlo->delLove($id,$id_user);
+      $ml=$point->minusLove($id);
+      $love="blue";
 
    }     
+ 
       
    header('location:index.php');    
+ 
+}
+function like($id)
+{
+   $likes=new PostManager();
+   $countLikes=$likes->countLikes($id);
+   header('location:index.php');   
 }

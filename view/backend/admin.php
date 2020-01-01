@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<p class="ajout">Hello Admin</p>
+<p class="admini">Hello Admin</p>
 <p class="ajout"><a href="index.php">Retour sur le site </a></p>
 
 <table cellpadding="5" cellspacing="10" class="table">

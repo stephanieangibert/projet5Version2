@@ -8,19 +8,19 @@
     <div>
     <div ><p class="photoRond"> <img class="photo img-fluid"src="member/avatars/'.$data['avatar'].'"></p></div>
     <div class="form-group row" >  
-    <label class="control-label col-sm-2 offset-3" for="name"  >Pseudo </label>        
+    <label class="control-label col-sm-2 offset-sm-3" for="name"  >Pseudo </label>        
         <input class="col-sm-3" type="text" id="name" name="pseudo" value="'.$data['pseudo'].'">     
     </div>
     <div class="form-group row" >
-        <label class="control-label col-sm-2 offset-3" for="mail">e-mail </label>      
+        <label class="control-label col-sm-2 offset-sm-3" for="mail">e-mail </label>      
         <input class="col-sm-3" type="email" id="mail" name="email" value="'.$data['email'].'" >
     </div>    
     <div class="form-group row">
-        <label class="control-label col-sm-2 offset-3" for="mdp">Mot de passe </label>      
+        <label class="control-label col-sm-2 offset-sm-3" for="mdp">Mot de passe </label>      
         <input class="col-sm-3"  type="password" id="mdp" name="password" value="6 caractères">       
     </div>
     <div class="form-group row" >
-        <label class="control-label col-sm-2 offset-3" for="mdp">Mot de passe </label>      
+        <label class="control-label col-sm-2 offset-sm-3" for="mdp">Mot de passe </label>      
         <input class="col-sm-3" type="password" id="mdp" name="pass1"  placeholder="6 caractères">
         </div>
    

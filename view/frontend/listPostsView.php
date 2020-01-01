@@ -17,7 +17,7 @@
         endif;?>    
       
        <h3 class="col">
-    <?php echo htmlspecialchars($data['pseudo']); ?>     
+    <?php echo htmlspecialchars(ucfirst($data['pseudo'])); ?>     
       </h3>
       </div>
       <div class="row ">
@@ -41,7 +41,7 @@
               echo'<p class="photoRecette col-12"> <img class="photoRe img-fluid"src="member/photo/'.$data['photo'].'"></p>';
                   endif; ?>
                    
-                    <div class="ml-auto commentaires"><a class="col"href="index.php?action=post&amp;id=<?php echo $data['id'] ?>">Commentaires</a><a class="col" href="index.php?action=love&amp;id=<?php echo$data['id'];?>"><i class="fas fa-thumbs-up"></i></a></div>
+                    <div class="ml-auto commentaires"><a class="col"href="index.php?action=post&amp;id=<?php echo $data['id'] ?>">Commentaires</a><a class="col" href="index.php?action=love&amp;id=<?php echo$data['id'];?>"><i id="love" class="fas fa-thumbs-up"></i></a><font class="point"><?php echo $data['love'];?></font></div>
               
                
                </div>
@@ -64,7 +64,7 @@ for($i=1;$i<=$allPages;$i++) {
 }
 ?> 
  </div>      
-
+ <script src="public/js/like.js"> </script> 
 
 <?php $content = ob_get_clean(); ?>
 
